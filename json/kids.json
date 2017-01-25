@@ -1,0 +1,21 @@
+[{
+  "title" : "Pants",
+  "imgPath" : "img/content-img/img-kids1.jpg",
+  "price": "400"
+},
+{
+  "title" : "Suits & Blazers",
+  "imgPath" : "img/content-img/img-kids2.jpg",
+  "price": "1100"
+},
+{
+  "title" : "Sweaters",
+  "imgPath" : "img/content-img/img-kids3.jpg",
+  "price": "2000"
+},
+{
+  "title" : "Swimwear",
+  "imgPath" : "img/content-img/img-kids4.jpg",
+  "price": "300"
+}
+]

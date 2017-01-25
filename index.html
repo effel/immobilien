@@ -1,0 +1,90 @@
+<!doctype html>
+<html  ng-app="myApp">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tanya Test</title>
+
+<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
+<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="css/main.css">
+<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+<script type="text/javascript" src="node_modules/angular/angular.min.js"></script>
+<script type="text/javascript" src="node_modules/angular-scroll/angular-scroll.min.js"></script>
+<script type="text/javascript" src="js/app.js"></script>
+</head>
+
+<body>
+<div class="main-wrapper" ng-controller="FilterController">
+  <div class="banner">
+      <header>
+        <a href="/" class="logo"></a> 
+        <div class="mobile_nav"  ng-class="{active : activeMenu}" ng-click="showNavMenu()">
+          <i class="fa fa-list"></i>     
+        </div>
+        <nav class="hidden" ng-class="{hidden : !activeMenu}">
+          <a href="">Home</a>
+          <a href="">Products</a>
+          <a href="" class="card"  ng-class="{current : activeCard}" ><i class="fa fa-shopping-cart"></i></a>
+        </nav>
+      </header>
+      <div class="main-info">
+        <h2>Our clothing, your comfort</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+   magna aliqua.</p>
+      </div>
+      <a href="" class="fa fa-chevron-down arr-for-moving"  ng-click="scrollToProducts();">
+      </a>
+  </div><!--/banner-->
+  <section class="main-block">
+    <div class="filtering-area">
+      <a href="javascript:void(0)" class="but-style"  ng-click="showAllProducts()">see all prodRobotoucts</a>      
+      <div class="item">
+         <div class="checkbox-style">
+            <input id="c1" type="checkbox" ng-model="checkedMan" ng-change="showCurrentItems('Man', checkedMan)"/> 
+            <label for="c1"><ins></ins> Men</label>
+         </div>
+         <div class="checkbox-style">
+            <input  id="c2" type="checkbox" ng-model="checkedWoman" ng-change="showCurrentItems('Woman', checkedWoman)"/> 
+            <label for="c2"><ins></ins> WoMen</label>
+         </div>  
+         <div class="checkbox-style">
+            <input  id="c3" type="checkbox" ng-model="checkedKids" ng-change="showCurrentItems('Kids', checkedKids)"/> 
+            <label for="c3"><ins></ins> childRobotoren</label>
+         </div>                    
+      </div>
+      <div class="clear"></div>
+    </div>
+    
+    <ul class="product-items" id="productsItems">
+      <li ng-repeat="product in products" ng-click="setItemState($index,$event)" ng-class="{current : shouldProductBeShown[$index]}">
+        <img ng-src="{{product.imgPath}}"/>
+        <div class="size-picker">size <i class="fa fa-angle-down" aria-hidden="true"></i></div>
+        <h2>{{product.title}}</h2>
+        <div class="price-block">{{product.price}} <i class="fa fa-eur" aria-hidden="true"></i></div>
+      </li>
+    </ul>
+  </section><!--/container-main-->
+  </div><!--/main-wrapper-->
+  <footer>
+    <div class="top-footer-block">
+      <i class="fa fa-twitter"></i><p> “ E-commerce psd theme available ”</p>
+    </div>
+    <div class="one_side">
+      <h2>Trekking</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </div>
+    <div class="sec_side">
+    	<nav>
+     		<a href="">credits</a>
+    		<a href="">Privacy </a>
+    		<a href="">about </a>
+    		<a href="">contact</a>       
+        </nav>
+    	<p>
+           Design by gianluca cosetta
+    	</p>
+    </div>
+  </footer>  
+</body>
+</html>
