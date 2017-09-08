@@ -73,8 +73,11 @@ a {
       background: #F2F2F2; }
   .items-wrap .item-content {
     flex: 3;
-    padding: 10px 7px;
+    padding: 10px;
     background: #fff; }
     .items-wrap .item-content h2 {
+      margin: 0 0 10px;
       color: #40A4F6;
       font-size: 1.5625rem; }
+    .items-wrap .item-content h3 {
+      font-weight: bold; }
