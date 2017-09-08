@@ -9,6 +9,10 @@
     "gulp-sass": "^3.1.0",
     "gulp-webserver": "^0.9.1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/effel/test_task.git"
+  },
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
