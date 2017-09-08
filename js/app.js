@@ -1,7 +1,21 @@
-let myApp = angular.module('myApp');
+var myApp = angular.module('myApp',  ['ngResource']);
 
-myApp.controller('ItemsController', ['$scope','$document','$http', function($scope,$document,$http) {
+myApp.factory('getProperties', ['$resource', function($resource) {
+	return $resource('/json/properties.json', {
+	}, {
+			'getData': { method: 'GET'}
+	});
+}]);
 
-console.log("I love you Toms!!1");
+myApp.controller('ItemsController', [
+	'$scope',
+	'getProperties',
+	'$http',
+	 function(
+		 $scope,
+		 getProperties,
+		 $http) {
+
+getProperties.getData();
 
 }]);
