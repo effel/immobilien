@@ -76,8 +76,10 @@ a {
     background: #FFC200; }
 
 .items-wrap {
-  display: flex;
+  display: none;
   flex-flow: column; }
+  .items-wrap.visible {
+    display: flex; }
   .items-wrap .item {
     display: flex;
     height: 200px;

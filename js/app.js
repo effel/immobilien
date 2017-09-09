@@ -17,12 +17,12 @@ myApp.controller('ItemsController', [
 		 GetProperties,
 		) {
 
+		var self = $scope;	
 		$scope.contentLoad = false;
 		$scope.propertiesArr = GetProperties.getData({}, function (response) {
-			console.log(response);
-			$scope.contentLoad = true;
+			self.contentLoad = true;
 		}, function(rejection) {
-			$scope.contentLoad = true;			
+			self.contentLoad = true;			
 			console.log(rejection);
 		});
 

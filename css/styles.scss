@@ -37,8 +37,11 @@ a {
   }
 }
 .items-wrap {
-  display: flex; 
+  display: none; 
   flex-flow: column;
+  &.visible {
+    display: flex;     
+  }
   .item {
     display: flex; 
     height: 200px;
