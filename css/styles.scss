@@ -44,7 +44,7 @@ a {
   }
   .item {
     display: flex; 
-    height: 200px;
+    height: 235px;
     margin: 5px 0;
     figure {
       position: relative;
@@ -63,20 +63,62 @@ a {
 
   .item-content {
     flex: 3;
-    padding: 10px;
+    position: relative;
+    padding: 10px;     
     background: #fff;
     h2 {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      right: 4px;
+      overflow: hidden;
       margin: 0 0 10px;
       color: $light-blue;
       font-size: calculateRem(25px);
+      white-space: nowrap;
+      text-overflow: ellipsis;
     }
     h3 {
       font-weight: bold;
-      margin: 0 0 10px;    
+      margin: 36px 0 10px;    
+    }
+    .has-balcony {
+      position: absolute;
+      top: 70px;
+      left: 10px;
     }
   }
   .parameters-wrap {
+    display: flex; 
+    margin: 47px 0 10px;
     background: $gray-light;
+    .param-item {
+      flex: 1;
+      padding: 13px 0;
+      text-align: center;
+      border-left: 1px solid $gray-light-darker;
+      &:first-child {
+        border-left: 1px solid $gray-light;        
+      }
+    }
+    .param-label {
+      padding: 0 0 7px;
+      font-size: calculateRem(14px);      
+    }
+    .param-body {
+      font-weight: bold;
+      font-size: calculateRem(18px);
+    }
+    .area-format {
+      position: relative;
+      display: inline-block;
+      sup {
+        position: absolute;
+        right: -5px;
+        top: -3px;
+        font-size: calculateRem(10px);
+      }
+    }
   }
 }
 
@@ -84,7 +126,6 @@ a {
 .spinner {
   width: 40px;
   height: 40px;
-
   position: relative;
   margin: 100px auto;
 }

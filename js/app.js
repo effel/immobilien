@@ -18,6 +18,7 @@ myApp.controller('ItemsController', [
 		) {
 
 		var self = $scope;	
+
 		$scope.contentLoad = false;
 		$scope.propertiesArr = GetProperties.getData({}, function (response) {
 			self.contentLoad = true;
@@ -44,3 +45,21 @@ myApp.factory('GetProperties', ['$resource', function($resource) {
 }]);
 
 // custom angular filters
+
+myApp.filter('custom', function($filter) {
+	return function(item) {
+		return item + ' m';
+	}
+});
+
+//custom angular directives
+
+myApp.directive('fullBlockWidth', function () {
+	return {
+		restrict: 'A',
+		link: function(scope, element, attrs) {
+			var parentWidth = $(element).parent(".item-content").width()
+			$(element).width(parentWidth);
+		}
+	}
+});
