@@ -84,25 +84,30 @@ a {
   .bordered-icon:hover {
     color: #FFC200; }
 
+.adv {
+  margin: 3px 0;
+  background: red;
+  height: 80px; }
+
 .items-wrap {
   display: none;
   flex-flow: column; }
   .items-wrap.visible {
     display: flex; }
-  .items-wrap .item {
+  .items-wrap .item-container {
     display: flex;
     height: 235px;
     margin: 5px 0; }
-    .items-wrap .item.collapsed {
+    .items-wrap .item-container.collapsed {
       background: red; }
-    .items-wrap .item figure {
+    .items-wrap .item-container figure {
       position: relative;
       display: flex;
       flex: 1;
       justify-content: center;
       align-items: center;
       background: #F2F2F2; }
-      .items-wrap .item figure .new {
+      .items-wrap .item-container figure .new {
         position: absolute;
         top: 9px;
         left: -10px; }

@@ -47,13 +47,19 @@ a {
   }
 }
 
+.adv {
+  margin: 3px 0;
+  background: red;
+  height: 80px;
+}
+
 .items-wrap {
   display: none; 
   flex-flow: column;
   &.visible {
     display: flex;     
   }
-  .item {
+  .item-container {
     display: flex; 
     height: 235px;
     margin: 5px 0;
