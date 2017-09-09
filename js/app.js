@@ -1,4 +1,16 @@
-var myApp = angular.module('myApp',  ['ngResource']);
+var myApp = angular.module('myApp',  ['ngResource','ui.router']);
+
+myApp.config(function($stateProvider,$urlRouterProvider){
+	$stateProvider.state('immobilien', {
+		url: '/immobilien',
+		templateUrl: 'index.html',
+		controller: 'ItemsController',
+		resolve: {
+
+		}
+	});
+	$urlRouterProvider.when('', '/immobilien');
+});
 
 myApp.controller('ItemsController', [
 	'$scope',
