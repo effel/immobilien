@@ -2,7 +2,7 @@
 
 First of all need to clone files from this remote git repository on Your local PC with command 
 
-git clone https://github.com/effel/test_angular.git
+git clone https://github.com/effel/immobilien
 
 Then install all necessary node_modules with: 
 

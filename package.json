@@ -13,12 +13,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/effel/test_task.git"
+    "url": "git+https://github.com/effel/immobilien"
   },
   "devDependencies": {},
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "author": "Tatsiana",
   "license": "ISC"
 }
