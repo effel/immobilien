@@ -19,7 +19,20 @@
         display: block;
         height: auto;
         margin: 0;
-        box-shadow: 10px -8px 61px -15px rgba(0,0,0,0.15);
+        &.collapsed {
+            margin: 3px 0;
+            background: #fff;
+            h2 {
+                top: 12px;
+            }
+            .parameters-wrap {
+                width: 73%;
+                margin: 5px 50px 0 10px;                  
+            }
+            .param-body {
+                font-size: calculateRem(14px);    
+            }
+        }
         figure {
             height: 200px;
             .new {
@@ -62,5 +75,6 @@
             h2 {
                 font-size: calculateRem(18px);
             }
+         
         }
     }

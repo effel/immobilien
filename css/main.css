@@ -241,8 +241,17 @@ a {
   .items-wrap .item-container {
     display: block;
     height: auto;
-    margin: 0;
-    box-shadow: 10px -8px 61px -15px rgba(0, 0, 0, 0.15); }
+    margin: 0; }
+    .items-wrap .item-container.collapsed {
+      margin: 3px 0;
+      background: #fff; }
+      .items-wrap .item-container.collapsed h2 {
+        top: 12px; }
+      .items-wrap .item-container.collapsed .parameters-wrap {
+        width: 73%;
+        margin: 5px 50px 0 10px; }
+      .items-wrap .item-container.collapsed .param-body {
+        font-size: 0.875rem; }
     .items-wrap .item-container figure {
       height: 200px; }
       .items-wrap .item-container figure .new {
