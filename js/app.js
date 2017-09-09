@@ -17,9 +17,12 @@ myApp.controller('ItemsController', [
 		 GetProperties,
 		) {
 
+		$scope.contentLoad = false;
 		$scope.propertiesArr = GetProperties.getData({}, function (response) {
 			console.log(response);
+			$scope.contentLoad = true;
 		}, function(rejection) {
+			$scope.contentLoad = true;			
 			console.log(rejection);
 		});
 
@@ -28,13 +31,7 @@ myApp.controller('ItemsController', [
 			 var currentDate = Date.now();
 			 var itemDate = new Date(item.meta.creation.date);
 			 var checkinDate = new Date(currentDate - itemDate).getDay();
-
-			 if (checkinDate > newDayCounter) {
-				return false; 
-			 } else {
-				 return true;
-			 }
-   
+             return   !(checkinDate > newDayCounter);
 		}
 }]);
 
@@ -47,8 +44,3 @@ myApp.factory('GetProperties', ['$resource', function($resource) {
 }]);
 
 // custom angular filters
-myApp.filter('setItemImage', function($filter) {
-	return function(itemUrl) {
-		return !itemUrl ? "" : itemUrl ;
-	}
-});
