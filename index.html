@@ -18,20 +18,20 @@
         <div class="double-bounce2"></div>
    </div>
    <div class="items-wrap" data-ng-class="{'visible' : contentLoad}">
-       <div class="item" data-ng-repeat="item in propertiesArr.hits" data-ng-class="{'collapsed' : !showItemHeight}">
-          <div class="item-container">          
-            <figure>
+       <div class="item" data-ng-repeat="item in propertiesArr.hits">
+          <div class="item-container" data-ng-class="{'collapsed' : !showItemHeight}">          
+            <figure data-ng-show="showItemHeight">
                <div data-ng-if="setVisibleByDay(item)" class="badge orange new">New</div>
                <img data-ng-if="item.meta.features.LOGO_ON_RESULTLIST.url" data-ng-src="{{ item.meta.features.LOGO_ON_RESULTLIST.url }}"/> 
                <p data-ng-if="!item.meta.features.LOGO_ON_RESULTLIST.url">no picture</p>
             </figure>  
             <div class="item-content">
                 <h2><a href="">{{item.description.title}}</a></h2>
-                <h3>{{item.localization.address.zip}} {{item.localization.address.city}}  {{item.localization.address.street}} {{item.localization.address.streetNumber}} </h3>
-                <div data-ng-if="item.area.numberOfBalconies > 0" class="badge has-balcony">Balcony</div>
+                <h3 data-ng-show="showItemHeight">{{item.localization.address.zip}} {{item.localization.address.city}}  {{item.localization.address.street}} {{item.localization.address.streetNumber}} </h3>
+                <div data-ng-show="showItemHeight" data-ng-if="item.area.numberOfBalconies > 0" class="badge has-balcony">Balcony</div>
                 <div class="parameters-wrap">
                     <div class="param-item">
-                        <div class="param-label">
+                        <div class="param-label" data-ng-show="showItemHeight">
                            Total Area
                         </div>    
                         <div class="param-body">
@@ -39,15 +39,16 @@
                         </div>                         
                     </div>
                     <div class="param-item">
-                        <div class="param-label">
+                        <div class="param-label"  data-ng-show="showItemHeight">
                             Number of rooms
                         </div>    
                         <div class="param-body">
                             {{item.area.numberOfRooms}}
+                            <span data-ng-show="!showItemHeight">Rooms</span>    
                         </div>                             
                     </div>      
                     <div class="param-item">
-                        <div class="param-label">
+                        <div class="param-label" data-ng-show="showItemHeight">
                             Price
                         </div>    
                         <div class="param-body">
@@ -55,15 +56,15 @@
                         </div>                             
                     </div>                                  
                 </div>
-                <div data-ng-if="item.meta.account.cwid" class="badge orange-dark">Private</div>
-                <div class="bordered-icon" data-ng-click="showItemHeight = !showItemHeight">
+                <div data-ng-if="item.meta.account.cwid" data-ng-show="!showItemHeight" class="badge orange-dark">Private</div>
+                <div class="bordered-icon" data-ng-show="showItemHeight" data-ng-click="showItemHeight = false">
                     <i class="fa fa-times"></i>
                 </div>  
-                <div class="bordered-icon star">
+                <div data-ng-show="showItemHeight" class="bordered-icon star">
                    <i class="fa fa-star"></i>
                 </div>  
-                <div class="bordered-icon" data-ng-click="showItemHeight = !showItemHeight">
-                    <i class="fa fa-times"></i>
+                <div class="bordered-icon" data-ng-show="!showItemHeight" data-ng-click="showItemHeight = true">
+                     <i class="fa fa-info"></i>
                 </div>  
             </div>
          </div>

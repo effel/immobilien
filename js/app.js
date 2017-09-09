@@ -20,7 +20,7 @@ myApp.controller('ItemsController', [
 		var self = $scope;	
 
 		$scope.contentLoad = false;
-		$scope.showItemHeight = false;
+		$scope.showItemHeight = true;
 
 		$scope.propertiesArr = GetProperties.getData({}, function (response) {
 			self.contentLoad = true;

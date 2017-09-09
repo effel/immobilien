@@ -59,5 +59,8 @@
             figure {
                 height: 150px;
             }
+            h2 {
+                font-size: calculateRem(18px);
+            }
         }
     }
