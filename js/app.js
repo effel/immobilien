@@ -54,4 +54,3 @@ myApp.filter('custom', function($filter) {
 	}
 });
 
-//custom angular directives

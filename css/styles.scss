@@ -6,6 +6,10 @@ body, html {
 }
 a {
   text-decoration: none;
+  color: $light-blue;
+  &:hover {
+     color: $lilac;
+  }
 }
 .clear {
   clear: both;
@@ -101,7 +105,7 @@ a {
         position: absolute;
         right: 0;
         top: 0;
-        bottom: 0;
+        bottom: 20px;
         display: block;
         content: "";
         width: 50px;
