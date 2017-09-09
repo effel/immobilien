@@ -36,6 +36,17 @@ a {
     background: $medium-orange;   
   }
 }
+.bordered-icon {
+  display: inline-block;
+  padding: 4px 6px;
+  font-size: calculateRem(18px); 
+  border-radius: 3px;
+  border: 1px solid $gray-light-darker;
+  &:hover {
+    color: $medium-orange;
+  }
+}
+
 .items-wrap {
   display: none; 
   flex-flow: column;
@@ -86,6 +97,16 @@ a {
       position: absolute;
       top: 70px;
       left: 10px;
+    }
+    .bordered-icon {
+      position: absolute;
+      top: 10px;
+      right: 12px; 
+      width: 16px;
+      text-align: center;
+      &.star {
+        top: 43px;        
+      }     
     }
   }
   .parameters-wrap {

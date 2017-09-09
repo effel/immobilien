@@ -38,24 +38,29 @@
                         </div>                         
                     </div>
                     <div class="param-item">
-                            <div class="param-label">
-                                    Number of rooms
-                                 </div>    
-                                 <div class="param-body">
-                                       {{item.area.numberOfRooms}}
-                                 </div>                             
+                        <div class="param-label">
+                            Number of rooms
+                        </div>    
+                        <div class="param-body">
+                            {{item.area.numberOfRooms}}
+                        </div>                             
                     </div>      
                     <div class="param-item">
-                            <div class="param-label">
-                                    Price
-                                 </div>    
-                                 <div class="param-body">
-                                       {{item.priceInformation.primaryPrice | currency: "€"}}
-                                 </div>                             
+                        <div class="param-label">
+                            Price
+                        </div>    
+                        <div class="param-body">
+                            {{item.priceInformation.primaryPrice | currency: "€"}}
+                        </div>                             
                     </div>                                  
                 </div>
                 <div data-ng-if="item.meta.account.cwid" class="badge orange-dark">Private</div>
-
+                <div class="bordered-icon">
+                    <i class="fa fa-times"></i>
+                </div>  
+                <div class="bordered-icon star">
+                   <i class="fa fa-star"></i>
+                </div>  
             </div>
        </div>
    </div>       
