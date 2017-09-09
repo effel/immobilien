@@ -18,7 +18,7 @@
         <div class="double-bounce2"></div>
    </div>
    <div class="items-wrap" data-ng-class="{'visible' : contentLoad}">
-       <div class="item" data-ng-repeat="item in propertiesArr.hits">
+       <div class="item" data-ng-repeat="item in propertiesArr.hits" data-ng-class="{'collapsed' : !showItemHeight}">
             <figure>
                <div data-ng-if="setVisibleByDay(item)" class="badge orange new">New</div>
                <img data-ng-if="item.meta.features.LOGO_ON_RESULTLIST.url" data-ng-src="{{ item.meta.features.LOGO_ON_RESULTLIST.url }}"/> 
@@ -55,7 +55,7 @@
                     </div>                                  
                 </div>
                 <div data-ng-if="item.meta.account.cwid" class="badge orange-dark">Private</div>
-                <div class="bordered-icon">
+                <div class="bordered-icon" data-ng-click="showItemHeight = !showItemHeight">
                     <i class="fa fa-times"></i>
                 </div>  
                 <div class="bordered-icon star">

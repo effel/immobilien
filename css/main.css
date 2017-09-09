@@ -93,6 +93,8 @@ a {
     display: flex;
     height: 235px;
     margin: 5px 0; }
+    .items-wrap .item.collapsed {
+      background: red; }
     .items-wrap .item figure {
       position: relative;
       display: flex;
@@ -113,13 +115,22 @@ a {
       position: absolute;
       top: 10px;
       left: 10px;
-      right: 4px;
+      right: 59px;
+      height: 40px;
       overflow: hidden;
       margin: 0 0 10px;
       color: #40A4F6;
       font-size: 1.5625rem;
-      white-space: nowrap;
-      text-overflow: ellipsis; }
+      white-space: nowrap; }
+      .items-wrap .item-content h2:after {
+        position: absolute;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        display: block;
+        content: "";
+        width: 50px;
+        box-shadow: inset -44px 3px 55px 0px white; }
     .items-wrap .item-content h3 {
       font-weight: bold;
       margin: 36px 0 10px; }

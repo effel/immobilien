@@ -20,6 +20,8 @@ myApp.controller('ItemsController', [
 		var self = $scope;	
 
 		$scope.contentLoad = false;
+		$scope.showItemHeight = false;
+
 		$scope.propertiesArr = GetProperties.getData({}, function (response) {
 			self.contentLoad = true;
 		}, function(rejection) {
@@ -54,12 +56,3 @@ myApp.filter('custom', function($filter) {
 
 //custom angular directives
 
-myApp.directive('fullBlockWidth', function () {
-	return {
-		restrict: 'A',
-		link: function(scope, element, attrs) {
-			var parentWidth = $(element).parent(".item-content").width()
-			$(element).width(parentWidth);
-		}
-	}
-});

@@ -57,6 +57,9 @@ a {
     display: flex; 
     height: 235px;
     margin: 5px 0;
+    &.collapsed {
+      background: red;
+    }
     figure {
       position: relative;
       display: flex;       
@@ -81,13 +84,23 @@ a {
       position: absolute;
       top: 10px;
       left: 10px;
-      right: 4px;
+      right: 59px;
+      height: 40px; 
       overflow: hidden;
       margin: 0 0 10px;
       color: $light-blue;
       font-size: calculateRem(25px);
       white-space: nowrap;
-      text-overflow: ellipsis;
+      &:after {
+        position: absolute;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        display: block;
+        content: "";
+        width: 50px;
+        box-shadow: inset -44px 3px 55px 0px rgba(255,255,255,1);
+      }
     }
     h3 {
       font-weight: bold;
