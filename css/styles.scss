@@ -16,6 +16,21 @@ a {
 	min-height: 100%;
 }
 
+
+.badge {
+  display: inline-block;
+  font-size: calculateRem(14px); 
+  padding: 5px;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 4px;
+  background: $general-font-color;
+  &.new {
+    padding: 8px;
+    font-size: calculateRem(18px); 
+    background: $dark-orange;
+  }
+}
 .items-wrap {
   display: flex; 
   flex-flow: column;
@@ -24,11 +39,17 @@ a {
     height: 200px;
     margin: 5px 0;
     figure {
+      position: relative;
       display: flex;       
       flex: 1;
       justify-content: center;
       align-items: center;
       background: $gray-light;
+      .new {
+        position: absolute;
+        top: 9px;
+        left: -10px;
+      }
     }
   }
 
@@ -43,6 +64,7 @@ a {
     }
     h3 {
       font-weight: bold;
+      margin: 0 0 10px;    
     }
   }
 }

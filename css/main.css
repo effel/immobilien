@@ -58,6 +58,19 @@ a {
   max-width: 1024px;
   min-height: 100%; }
 
+.badge {
+  display: inline-block;
+  font-size: 0.875rem;
+  padding: 5px;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 4px;
+  background: #777777; }
+  .badge.new {
+    padding: 8px;
+    font-size: 1.125rem;
+    background: #FF7500; }
+
 .items-wrap {
   display: flex;
   flex-flow: column; }
@@ -66,11 +79,16 @@ a {
     height: 200px;
     margin: 5px 0; }
     .items-wrap .item figure {
+      position: relative;
       display: flex;
       flex: 1;
       justify-content: center;
       align-items: center;
       background: #F2F2F2; }
+      .items-wrap .item figure .new {
+        position: absolute;
+        top: 9px;
+        left: -10px; }
   .items-wrap .item-content {
     flex: 3;
     padding: 10px;
@@ -80,4 +98,5 @@ a {
       color: #40A4F6;
       font-size: 1.5625rem; }
     .items-wrap .item-content h3 {
-      font-weight: bold; }
+      font-weight: bold;
+      margin: 0 0 10px; }
